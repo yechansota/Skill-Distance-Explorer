@@ -4,7 +4,7 @@
   <em>(Region: AL · GA · NC · SC · TN)</em><br>
 </p>
 
-[🔗 Try the live tool here](https://yechansota.github.io/Skill-Distance-Explorer/)
+[🔗 Try the live tool here]
 
 Following the project 1 analysis of workforce aging, identifying the problem is only the first step. This second project addresses the practical solution: what actions should we take? How can we practically resolve the aging workforce crisis in the manufacturing sector? Manufacturing is the backbone of the economy, accounting for roughly 30% of South Korea's GDP, and is deeply intertwined with the U.S. industrial characteristic. For the long-term sustainability of these operations, it is critical to implement highly efficient, cross-functional training driven by rational decision-making. In many manufacturing plants, vital decisions regarding staff training and job rotations often rely on the personal intuition of senior managers. While experience is valuable, it lacks the consistency needed for large-scale planning.
 
