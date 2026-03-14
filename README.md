@@ -10,7 +10,7 @@ Following the project 1 analysis of workforce aging, identifying the problem is 
 
 To solve this, I developed a data-driven framework that measures "skill gaps" between roles. This tool provides objective evidence for flexible staff transfers, targeted learning and development, and succession planning. The core idea is simple. While younger workers may learn new technologies faster, experienced employees possess irreplaceable institutional knowledge and judgment. This project isn't about replacement; it's about strategic placement. By moving veterans into roles where their wisdom is most effective, companies can maintain a competitive edge even as physical demands or technical tools evolve.
 
-
+![CTI Profile Map](fig1_cti_map.png)
 ## The Theoretical Foundation: CHC Theory
 
 The distance calculations in this tool are grounded in the **Cattell-Horn-Carroll (CHC) model** of human intelligence, the most widely validated framework in psychometric research ([Schneider & McGrew, 2018](https://pmc.ncbi.nlm.nih.gov/articles/PMC9959556/)). CHC theory distinguishes between two broad categories of cognitive ability:
@@ -265,10 +265,8 @@ python3 skill_distance_final.py
 The script produces two files in the `output_figures/` directory: a static cognitive profile map (`fig1_cti_map.png`) and the interactive HTML tool (`skill_explorer.html`). The HTML file is self-contained with no external dependencies and can be deployed directly to GitHub Pages or opened locally in any browser.
 
 
-## Limitations and What I Would Do Next
-
+## Limitations 
 ### 1. Gf/Gc Mapping Is an Approximation, Not a CHC Factor Score
-
 The Gf and Gc groupings used in this project are **approximate proxies** constructed from O\*NET's 52 Ability items, not direct CHC factor scores derived from psychometric test batteries (e.g., WJ-IV, WAIS-IV). Of the 11 abilities assigned to Gf, five belong to **adjacent CHC broad abilities** rather than Gf proper:
 
 | Ability | CHC Proper Classification | Why I Included It in Gf |
@@ -287,6 +285,7 @@ The 11-vs-6 asymmetry may also introduce a **statistical bias**: Gf\_mean (avera
 
 **Sensitivity analysis completed (`fig_sensitivity.png`):** CTI rankings were compared across three Gf/Gc definitions (Broad 11/6, Intermediate 8/6, Strict 6/4). Spearman rank correlations: Broad vs Intermediate ρ=0.949, Broad vs Strict ρ=0.888, Intermediate vs Strict ρ=0.962. The Gc-dependent top-10 showed 6/10 overlap between Broad and Strict definitions; the Gf-dependent top-10 showed 3/10 overlap. **Conclusion: Gc-side rankings are robust to classification choice; Gf-side rankings are sensitive to whether Visualization and Memorization are included.** The current broadened definition is defensible for manufacturing contexts but should be noted as an upper-bound Gf estimate.
 
+![CTI Sensitivity](fig_sensitivity.png)
 ### 2. Skills Weighting — Resolved with 2D Weighting System
 
 An earlier version of this tool assigned a uniform 1.0x weight to all 35 Skills, creating an internal inconsistency: a gap in "Deductive Reasoning" (Ability, weighted 1.5x) was penalized nearly twice as much as a gap in "Critical Thinking" (Skill, weighted 1.0x), despite both measuring essentially the same Gf-aligned cognitive construct.
@@ -316,6 +315,8 @@ The results showed a **significant negative correlation** (Pearson r=-0.309, p=0
 **Interpretation:** Workforce age structure is driven primarily by **labor market entry pathways and occupational tenure patterns**, not by cognitive aging vulnerability alone. High-CTI roles in manufacturing (HR specialists, production planners, accountants) attract younger college-educated entrants with high turnover, while lower-CTI skilled trades (machinists, welders, millwrights) retain workers for decades through apprenticeship systems and limited lateral mobility.
 
 This finding does not invalidate CTI — it clarifies its proper scope. **CTI measures cognitive aging risk at the individual level** (what cognitive capacities will decline as this specific worker ages in this role), **not aggregate age composition** (how old the current workforce happens to be). A machinist role may have many older workers because of long tenure, but its moderate CTI correctly indicates that those workers face gradual Gf decline — they stay not because the job is age-friendly, but because switching costs are high. Conversely, a production planner role may have younger workers despite high CTI, but when those workers do age, their accumulated scheduling knowledge (Gc) will be the hardest asset to replace.
+
+![CTI Validation](fig_cti_validation.png)
 
 ## Repository
 
